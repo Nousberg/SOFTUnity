@@ -159,6 +159,7 @@ public class SoftBodyTruss : ScriptableObject
         beams.Clear();
         tetrahedra.Clear();
         triangles.Clear();
+        nodeSets.Clear();
     }
     
     public void ClearBeams()
@@ -172,6 +173,7 @@ public class SoftBodyTruss : ScriptableObject
         beams.Clear();
         tetrahedra.Clear();
         triangles.Clear();
+        nodeSets.Clear();
     }
     
     public int AddNode(Vector3 localPosition, float inverseMass = 1f, int originalVertexIndex = -1)
@@ -227,6 +229,17 @@ public class SoftBodyTruss : ScriptableObject
         {
             for (int i = 0; i < 3; i++)
                 if (tri.nodes[i] > index) tri.nodes[i]--;
+        }
+        
+        // Update nodeSets: remove the deleted index and decrement higher indices
+        foreach (var nodeSet in nodeSets)
+        {
+            nodeSet.nodeIndices.Remove(index);
+            for (int i = 0; i < nodeSet.nodeIndices.Count; i++)
+            {
+                if (nodeSet.nodeIndices[i] > index)
+                    nodeSet.nodeIndices[i]--;
+            }
         }
         
         nodes.RemoveAt(index);
@@ -303,14 +316,18 @@ public class SoftBodyTruss : ScriptableObject
     
     #region NodeSet Methods
     
-    public int[] GetNodeSetIndices(string setName)
+    /// <summary>
+    /// Get node indices for a named set. Returns the list directly (no copy).
+    /// FIX: Returns IReadOnlyList instead of ToArray() to avoid GC (bug 3.2)
+    /// </summary>
+    public IReadOnlyList<int> GetNodeSetIndices(string setName)
     {
         if (string.IsNullOrEmpty(setName)) return null;
         
         foreach (var set in nodeSets)
         {
             if (set.name == setName)
-                return set.nodeIndices.ToArray();
+                return set.nodeIndices;
         }
         return null;
     }

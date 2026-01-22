@@ -151,10 +151,10 @@ public class SoftBodyConstraint : MonoBehaviour
             // For world constraints, store the anchor position
             if (link.typeB == AttachmentType.World)
             {
-                int[] indicesA = m_attachedBody.trussData.GetNodeSetIndices(link.nodeSetA);
-                if (indicesA != null && indicesA.Length > 0)
+                var indicesAList = m_attachedBody.trussData.GetNodeSetIndices(link.nodeSetA);
+                if (indicesAList != null && indicesAList.Count > 0)
                 {
-                    foreach (int idx in indicesA)
+                    foreach (int idx in indicesAList)
                     {
                         if (!m_worldAnchors.ContainsKey(idx))
                         {
@@ -213,8 +213,8 @@ public class SoftBodyConstraint : MonoBehaviour
     {
         if (body == null || body.trussData == null) return Vector3.zero;
         
-        int[] indices = body.trussData.GetNodeSetIndices(nodeSetName);
-        if (indices == null || indices.Length == 0) return Vector3.zero;
+        var indices = body.trussData.GetNodeSetIndices(nodeSetName);
+        if (indices == null || indices.Count == 0) return Vector3.zero;
         
         // Get center of all nodes in the set
         Vector3 center = Vector3.zero;
@@ -258,10 +258,14 @@ public class SoftBodyConstraint : MonoBehaviour
     
     private void ApplyWorldConstraint(ConstraintLink link)
     {
-        int[] indicesA = m_attachedBody.trussData.GetNodeSetIndices(link.nodeSetA);
-        if (indicesA == null || indicesA.Length == 0) return;
+        IReadOnlyList<int> indicesA = m_attachedBody.trussData.GetNodeSetIndices(link.nodeSetA);
+        if (indicesA == null || indicesA.Count == 0) return;
         
-        float compliance = link.stiffness > 0 ? 1f / link.stiffness : 1e-6f;
+        // Normalize stiffness to 0..1 range for constraint application
+        // stiffness value is user-facing (higher = stiffer), map to correction ratio
+        float stiffnessRatio = Mathf.Clamp01(link.stiffness / 10000f);  // 10000 = very stiff
+        if (link.stiffness >= float.MaxValue / 2f) stiffnessRatio = 1f; // Infinity = rigid
+        
         float maxDistance = link.actualRestLength;
         
         foreach (int idx in indicesA)
@@ -279,11 +283,11 @@ public class SoftBodyConstraint : MonoBehaviour
             
             if (distance > maxDistance + 0.0001f)
             {
-                // Apply constraint force
-                float correction = (distance - maxDistance) * (1f - compliance);
-                Vector3 delta = (toAnchor / distance) * correction * node.inverseMass;
+                // World constraint: move node fully toward anchor (no inverse mass scaling)
+                float error = distance - maxDistance;
+                Vector3 correction = (toAnchor / distance) * error * stiffnessRatio;
                 
-                node.worldPosition += delta;
+                node.worldPosition += correction;
                 
                 // Apply damping
                 if (link.damping > 0)
@@ -297,14 +301,22 @@ public class SoftBodyConstraint : MonoBehaviour
     
     private void ApplyBodyToBodyConstraint(ConstraintLink link)
     {
-        int[] indicesA = m_attachedBody.trussData.GetNodeSetIndices(link.nodeSetA);
-        int[] indicesB = m_baseBody.trussData.GetNodeSetIndices(link.nodeSetB);
+        IReadOnlyList<int> indicesA = m_attachedBody.trussData.GetNodeSetIndices(link.nodeSetA);
+        IReadOnlyList<int> indicesB = m_baseBody.trussData.GetNodeSetIndices(link.nodeSetB);
         
         if (indicesA == null || indicesB == null || 
-            indicesA.Length == 0 || indicesB.Length == 0) return;
+            indicesA.Count == 0 || indicesB.Count == 0) return;
         
-        float compliance = link.stiffness > 0 ? 1f / link.stiffness : 1e-6f;
-        float stiffness = 1f - Mathf.Min(1f, compliance);
+        // Warn about O(N*M) complexity
+        int linkCount = indicesA.Count * indicesB.Count;
+        if (linkCount > 100)
+        {
+            Debug.LogWarning($"[SoftBodyConstraint] High complexity: {linkCount} constraint pairs between {link.nodeSetA} and {link.nodeSetB}. Consider using smaller node sets.");
+        }
+        
+        // Normalize stiffness to 0..1 range
+        float stiffnessRatio = Mathf.Clamp01(link.stiffness / 10000f);
+        if (link.stiffness >= float.MaxValue / 2f) stiffnessRatio = 1f;
         
         // Connect each node in setA to each node in setB
         foreach (int idxA in indicesA)
@@ -324,7 +336,7 @@ public class SoftBodyConstraint : MonoBehaviour
                 if (currentLength < 0.0001f) continue;
                 
                 float error = currentLength - link.actualRestLength;
-                Vector3 correction = (delta / currentLength) * error * stiffness;
+                Vector3 correction = (delta / currentLength) * error * stiffnessRatio;
                 
                 float totalInvMass = nodeA.inverseMass + (nodeB.isPinned ? 0 : nodeB.inverseMass);
                 if (totalInvMass <= 0) continue;

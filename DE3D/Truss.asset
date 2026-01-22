@@ -1,0 +1,1020 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6623ebd5c68f9d042a12391e284c10ba, type: 3}
+  m_Name: Truss
+  m_EditorClassIdentifier: 
+  nodePositions:
+  - {x: 0.5, y: -0.5, z: 0.5}
+  - {x: -0.5, y: -0.5, z: 0.5}
+  - {x: 0.5, y: 0.5, z: 0.5}
+  - {x: -0.5, y: 0.5, z: 0.5}
+  - {x: 0.5, y: 0.5, z: -0.5}
+  - {x: -0.5, y: 0.5, z: -0.5}
+  - {x: 0.5, y: -0.5, z: -0.5}
+  - {x: -0.5, y: -0.5, z: -0.5}
+  beams:
+  - nodeA: 0
+    nodeB: 1
+    compliance: 0.022
+    damping: 0.036
+    restLength: 1
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 0
+    nodeB: 2
+    compliance: 0.022
+    damping: 0.036
+    restLength: 1
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 0
+    nodeB: 3
+    compliance: 0.022
+    damping: 0.036
+    restLength: 1.4142135
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 0
+    nodeB: 4
+    compliance: 0.022
+    damping: 0.036
+    restLength: 1.4142135
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 0
+    nodeB: 5
+    compliance: 0.022
+    damping: 0.036
+    restLength: 1.7320508
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 0
+    nodeB: 6
+    compliance: 0.022
+    damping: 0.036
+    restLength: 1
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 0
+    nodeB: 7
+    compliance: 0.022
+    damping: 0.036
+    restLength: 1.4142135
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 1
+    nodeB: 2
+    compliance: 0.022
+    damping: 0.036
+    restLength: 1.4142135
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 1
+    nodeB: 3
+    compliance: 0.022
+    damping: 0.036
+    restLength: 1
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 1
+    nodeB: 4
+    compliance: 0.022
+    damping: 0.036
+    restLength: 1.7320508
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 1
+    nodeB: 5
+    compliance: 0.022
+    damping: 0.036
+    restLength: 1.4142135
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 1
+    nodeB: 6
+    compliance: 0.022
+    damping: 0.036
+    restLength: 1.4142135
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 1
+    nodeB: 7
+    compliance: 0.022
+    damping: 0.036
+    restLength: 1
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 2
+    nodeB: 3
+    compliance: 0.022
+    damping: 0.036
+    restLength: 1
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 2
+    nodeB: 4
+    compliance: 0.022
+    damping: 0.036
+    restLength: 1
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 2
+    nodeB: 5
+    compliance: 0.022
+    damping: 0.036
+    restLength: 1.4142135
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 2
+    nodeB: 6
+    compliance: 0.022
+    damping: 0.036
+    restLength: 1.4142135
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 2
+    nodeB: 7
+    compliance: 0.022
+    damping: 0.036
+    restLength: 1.7320508
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 3
+    nodeB: 4
+    compliance: 0.022
+    damping: 0.036
+    restLength: 1.4142135
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 3
+    nodeB: 5
+    compliance: 0.022
+    damping: 0.036
+    restLength: 1
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 3
+    nodeB: 6
+    compliance: 0.022
+    damping: 0.036
+    restLength: 1.7320508
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 3
+    nodeB: 7
+    compliance: 0.022
+    damping: 0.036
+    restLength: 1.4142135
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 4
+    nodeB: 5
+    compliance: 0.022
+    damping: 0.036
+    restLength: 1
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 4
+    nodeB: 6
+    compliance: 0.022
+    damping: 0.036
+    restLength: 1
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 4
+    nodeB: 7
+    compliance: 0.022
+    damping: 0.036
+    restLength: 1.4142135
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 5
+    nodeB: 6
+    compliance: 0.022
+    damping: 0.036
+    restLength: 1.4142135
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 5
+    nodeB: 7
+    compliance: 0.022
+    damping: 0.036
+    restLength: 1
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 6
+    nodeB: 7
+    compliance: 0.022
+    damping: 0.036
+    restLength: 1
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  pinnedNodes: 
+  nodeMasses:
+  - 12.5
+  - 12.5
+  - 12.5
+  - 12.5
+  - 12.5
+  - 12.5
+  - 12.5
+  - 12.5
+  faces:
+  - nodeA: 0
+    nodeB: 1
+    nodeC: 2
+    isCollidable: 1
+    originalRestArea: 0.5
+    restArea: 0.110522516
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 0
+    nodeB: 1
+    nodeC: 3
+    isCollidable: 1
+    originalRestArea: 0.5
+    restArea: 0.11076922
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 0
+    nodeB: 1
+    nodeC: 4
+    isCollidable: 1
+    originalRestArea: 0.70710677
+    restArea: 0.5576233
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 0
+    nodeB: 1
+    nodeC: 5
+    isCollidable: 1
+    originalRestArea: 0.70710677
+    restArea: 0.48934603
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 0
+    nodeB: 1
+    nodeC: 6
+    isCollidable: 1
+    originalRestArea: 0.5
+    restArea: 0.45623735
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 0
+    nodeB: 1
+    nodeC: 7
+    isCollidable: 1
+    originalRestArea: 0.5
+    restArea: 0.4815676
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 0
+    nodeB: 2
+    nodeC: 3
+    isCollidable: 1
+    originalRestArea: 0.5
+    restArea: 0.21810155
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 0
+    nodeB: 2
+    nodeC: 4
+    isCollidable: 1
+    originalRestArea: 0.5
+    restArea: 0.29860908
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 0
+    nodeB: 2
+    nodeC: 5
+    isCollidable: 1
+    originalRestArea: 0.70710677
+    restArea: 0.40709224
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 0
+    nodeB: 2
+    nodeC: 6
+    isCollidable: 1
+    originalRestArea: 0.5
+    restArea: 0.21122558
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 0
+    nodeB: 2
+    nodeC: 7
+    isCollidable: 1
+    originalRestArea: 0.70710677
+    restArea: 0.33878818
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 0
+    nodeB: 3
+    nodeC: 4
+    isCollidable: 1
+    originalRestArea: 0.8660254
+    restArea: 0.82911676
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 0
+    nodeB: 3
+    nodeC: 5
+    isCollidable: 1
+    originalRestArea: 0.70710677
+    restArea: 0.5590805
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 0
+    nodeB: 3
+    nodeC: 6
+    isCollidable: 1
+    originalRestArea: 0.70710677
+    restArea: 0.69082916
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 0
+    nodeB: 3
+    nodeC: 7
+    isCollidable: 1
+    originalRestArea: 0.8660254
+    restArea: 0.61313814
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 0
+    nodeB: 4
+    nodeC: 5
+    isCollidable: 1
+    originalRestArea: 0.70710677
+    restArea: 0.91462046
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 0
+    nodeB: 4
+    nodeC: 6
+    isCollidable: 1
+    originalRestArea: 0.5
+    restArea: 0.3927306
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 0
+    nodeB: 4
+    nodeC: 7
+    isCollidable: 1
+    originalRestArea: 0.8660254
+    restArea: 0.6866531
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 0
+    nodeB: 5
+    nodeC: 6
+    isCollidable: 1
+    originalRestArea: 0.70710677
+    restArea: 0.7498642
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 0
+    nodeB: 5
+    nodeC: 7
+    isCollidable: 1
+    originalRestArea: 0.70710677
+    restArea: 0.2922719
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 0
+    nodeB: 6
+    nodeC: 7
+    isCollidable: 1
+    originalRestArea: 0.5
+    restArea: 0.48526588
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 1
+    nodeB: 2
+    nodeC: 3
+    isCollidable: 1
+    originalRestArea: 0.5
+    restArea: 0.21834883
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 1
+    nodeB: 2
+    nodeC: 4
+    isCollidable: 1
+    originalRestArea: 0.70710677
+    restArea: 0.74859303
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 1
+    nodeB: 2
+    nodeC: 5
+    isCollidable: 1
+    originalRestArea: 0.8660254
+    restArea: 0.78593445
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 1
+    nodeB: 2
+    nodeC: 6
+    isCollidable: 1
+    originalRestArea: 0.8660254
+    restArea: 0.5572068
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 1
+    nodeB: 2
+    nodeC: 7
+    isCollidable: 1
+    originalRestArea: 0.70710677
+    restArea: 0.7099219
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 1
+    nodeB: 3
+    nodeC: 4
+    isCollidable: 1
+    originalRestArea: 0.70710677
+    restArea: 0.3815879
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 1
+    nodeB: 3
+    nodeC: 5
+    isCollidable: 1
+    originalRestArea: 0.5
+    restArea: 0.18045779
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 1
+    nodeB: 3
+    nodeC: 6
+    isCollidable: 1
+    originalRestArea: 0.70710677
+    restArea: 0.3453018
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 1
+    nodeB: 3
+    nodeC: 7
+    isCollidable: 1
+    originalRestArea: 0.5
+    restArea: 0.24205883
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 1
+    nodeB: 4
+    nodeC: 5
+    isCollidable: 1
+    originalRestArea: 0.70710677
+    restArea: 0.84021276
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 1
+    nodeB: 4
+    nodeC: 6
+    isCollidable: 1
+    originalRestArea: 0.70710677
+    restArea: 0.48028994
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 1
+    nodeB: 4
+    nodeC: 7
+    isCollidable: 1
+    originalRestArea: 0.70710677
+    restArea: 0.6361485
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 1
+    nodeB: 5
+    nodeC: 6
+    isCollidable: 1
+    originalRestArea: 0.8660254
+    restArea: 0.78291136
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 1
+    nodeB: 5
+    nodeC: 7
+    isCollidable: 1
+    originalRestArea: 0.5
+    restArea: 0.29415718
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 1
+    nodeB: 6
+    nodeC: 7
+    isCollidable: 1
+    originalRestArea: 0.5
+    restArea: 0.5106849
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 2
+    nodeB: 3
+    nodeC: 4
+    isCollidable: 1
+    originalRestArea: 0.5
+    restArea: 0.91426194
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 2
+    nodeB: 3
+    nodeC: 5
+    isCollidable: 1
+    originalRestArea: 0.5
+    restArea: 0.74812824
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 2
+    nodeB: 3
+    nodeC: 6
+    isCollidable: 1
+    originalRestArea: 0.70710677
+    restArea: 0.68417597
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 2
+    nodeB: 3
+    nodeC: 7
+    isCollidable: 1
+    originalRestArea: 0.70710677
+    restArea: 0.73386574
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 2
+    nodeB: 4
+    nodeC: 5
+    isCollidable: 1
+    originalRestArea: 0.5
+    restArea: 0.8163295
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 2
+    nodeB: 4
+    nodeC: 6
+    isCollidable: 1
+    originalRestArea: 0.5
+    restArea: 0.30269104
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 2
+    nodeB: 4
+    nodeC: 7
+    isCollidable: 1
+    originalRestArea: 0.70710677
+    restArea: 0.6243532
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 2
+    nodeB: 5
+    nodeC: 6
+    isCollidable: 1
+    originalRestArea: 0.8660254
+    restArea: 0.5542003
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 2
+    nodeB: 5
+    nodeC: 7
+    isCollidable: 1
+    originalRestArea: 0.70710677
+    restArea: 0.2288572
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 2
+    nodeB: 6
+    nodeC: 7
+    isCollidable: 1
+    originalRestArea: 0.70710677
+    restArea: 0.35816905
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 3
+    nodeB: 4
+    nodeC: 5
+    isCollidable: 1
+    originalRestArea: 0.5
+    restArea: 0.6365628
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 3
+    nodeB: 4
+    nodeC: 6
+    isCollidable: 1
+    originalRestArea: 0.70710677
+    restArea: 0.48888344
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 3
+    nodeB: 4
+    nodeC: 7
+    isCollidable: 1
+    originalRestArea: 0.8660254
+    restArea: 0.51201946
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 3
+    nodeB: 5
+    nodeC: 6
+    isCollidable: 1
+    originalRestArea: 0.70710677
+    restArea: 0.6180395
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 3
+    nodeB: 5
+    nodeC: 7
+    isCollidable: 1
+    originalRestArea: 0.5
+    restArea: 0.23041752
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 3
+    nodeB: 6
+    nodeC: 7
+    isCollidable: 1
+    originalRestArea: 0.70710677
+    restArea: 0.40801123
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 4
+    nodeB: 5
+    nodeC: 6
+    isCollidable: 1
+    originalRestArea: 0.5
+    restArea: 0.38050508
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 4
+    nodeB: 5
+    nodeC: 7
+    isCollidable: 1
+    originalRestArea: 0.5
+    restArea: 0.19619025
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 4
+    nodeB: 6
+    nodeC: 7
+    isCollidable: 1
+    originalRestArea: 0.5
+    restArea: 0.25137246
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  - nodeA: 5
+    nodeB: 6
+    nodeC: 7
+    isCollidable: 1
+    originalRestArea: 0.5
+    restArea: 0.06873578
+    areaPlasticityThreshold: 1
+    areaPlasticityRate: 0.7159997
+    maxAreaDeformation: 1
+  nodeSets: []
+  linkSets: []
+  compliance: 0.01
+  DefaultBeamDamping: 0.3
+  uniformMassEditorValue: 0.5

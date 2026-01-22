@@ -31,7 +31,12 @@ public class SoftBodyConstraintEditor : Editor
         
         // Header
         EditorGUILayout.Space();
-        EditorGUILayout.LabelField("Soft Body Constraint", EditorStyles.boldLabel);
+        GUIStyle headerStyle = new GUIStyle(EditorStyles.boldLabel)
+        {
+            fontSize = 14,
+            alignment = TextAnchor.MiddleCenter
+        };
+        EditorGUILayout.LabelField("Constraint Designer", headerStyle);
         EditorGUILayout.Space();
         
         // Base Body
@@ -187,8 +192,9 @@ public class SoftBodyConstraintEditor : Editor
         {
             if (!link.show) continue;
             
-            Vector3 pointA = GetAttachmentPoint(attachedBody, link.nodeSetA);
-            if (pointA == Vector3.zero) continue;
+            // FIX: Use TryGetAttachmentPoint to avoid Vector3.zero sentinel (bug 3.3)
+            if (!TryGetAttachmentPoint(attachedBody, link.nodeSetA, out Vector3 pointA))
+                continue;
             
             if (link.typeB == SoftBodyConstraint.AttachmentType.World)
             {
@@ -200,8 +206,7 @@ public class SoftBodyConstraintEditor : Editor
             else if (baseBody != null && baseBody.trussData != null)
             {
                 // Draw line to other body
-                Vector3 pointB = GetAttachmentPoint(baseBody, link.nodeSetB);
-                if (pointB != Vector3.zero)
+                if (TryGetAttachmentPoint(baseBody, link.nodeSetB, out Vector3 pointB))
                 {
                     Handles.color = Color.cyan;
                     Handles.DrawDottedLine(pointA, pointB, 2f);
@@ -210,13 +215,18 @@ public class SoftBodyConstraintEditor : Editor
         }
     }
     
-    private Vector3 GetAttachmentPoint(AdvancedVolumetricSoftBody body, string nodeSetName)
+    /// <summary>
+    /// Get center of a node set. FIX: Returns bool instead of using Vector3.zero as sentinel (bug 3.3)
+    /// </summary>
+    private bool TryGetAttachmentPoint(AdvancedVolumetricSoftBody body, string nodeSetName, out Vector3 point)
     {
-        if (body == null || body.trussData == null || string.IsNullOrEmpty(nodeSetName)) 
-            return Vector3.zero;
+        point = Vector3.zero;
         
-        int[] indices = body.trussData.GetNodeSetIndices(nodeSetName);
-        if (indices == null || indices.Length == 0) return Vector3.zero;
+        if (body == null || body.trussData == null || string.IsNullOrEmpty(nodeSetName)) 
+            return false;
+        
+        IReadOnlyList<int> indices = body.trussData.GetNodeSetIndices(nodeSetName);
+        if (indices == null || indices.Count == 0) return false;
         
         Vector3 center = Vector3.zero;
         int count = 0;
@@ -233,6 +243,11 @@ public class SoftBodyConstraintEditor : Editor
             }
         }
         
-        return count > 0 ? center / count : Vector3.zero;
+        if (count > 0)
+        {
+            point = center / count;
+            return true;
+        }
+        return false;
     }
 }

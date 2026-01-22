@@ -1,0 +1,615 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6623ebd5c68f9d042a12391e284c10ba, type: 3}
+  m_Name: HoodTruss
+  m_EditorClassIdentifier: 
+  nodePositions:
+  - {x: -0.2941503, y: 0.7563279, z: 1.9316983}
+  - {x: -0.6922419, y: 0.7875374, z: 1.8535405}
+  - {x: -0.7062223, y: 0.8959591, z: 1.3604476}
+  - {x: -0.29540455, y: 0.9060438, z: 1.4076035}
+  - {x: -0.29261935, y: 0.9221192, z: 0.8401578}
+  - {x: -0.7012602, y: 0.91198206, z: 0.786644}
+  - {x: 0.2941503, y: 0.7563279, z: 1.9316983}
+  - {x: 0.6922419, y: 0.7875374, z: 1.8535405}
+  - {x: 0.29261935, y: 0.9221192, z: 0.8401578}
+  - {x: 0.29540455, y: 0.9060438, z: 1.4076035}
+  - {x: 0.7062223, y: 0.8959591, z: 1.3604476}
+  - {x: 0.70126015, y: 0.91198206, z: 0.786644}
+  beams:
+  - nodeA: 0
+    nodeB: 1
+    compliance: 2
+    damping: 0
+    restLength: 0.40689015
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 0
+    nodeB: 2
+    compliance: 2
+    damping: 0
+    restLength: 0.7180721
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 0
+    nodeB: 3
+    compliance: 2
+    damping: 0
+    restLength: 0.5450613
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 0
+    nodeB: 6
+    compliance: 2
+    damping: 0
+    restLength: 0.5883006
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 0
+    nodeB: 7
+    compliance: 2
+    damping: 0
+    restLength: 0.98997587
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 0
+    nodeB: 9
+    compliance: 2
+    damping: 0
+    restLength: 0.80291045
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 1
+    nodeB: 2
+    compliance: 2
+    damping: 0
+    restLength: 0.5050657
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 1
+    nodeB: 3
+    compliance: 2
+    damping: 0
+    restLength: 0.6085914
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 1
+    nodeB: 6
+    compliance: 2
+    damping: 0
+    restLength: 0.98997587
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 2
+    nodeB: 3
+    compliance: 2
+    damping: 0
+    restLength: 0.41363823
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 2
+    nodeB: 4
+    compliance: 2
+    damping: 0
+    restLength: 0.6651716
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 2
+    nodeB: 5
+    compliance: 2
+    damping: 0
+    restLength: 0.57404923
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 3
+    nodeB: 4
+    compliance: 2
+    damping: 0
+    restLength: 0.5676802
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 3
+    nodeB: 5
+    compliance: 2
+    damping: 0
+    restLength: 0.74185264
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 3
+    nodeB: 6
+    compliance: 2
+    damping: 0
+    restLength: 0.80291045
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 3
+    nodeB: 8
+    compliance: 2
+    damping: 0
+    restLength: 0.81732804
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 3
+    nodeB: 9
+    compliance: 2
+    damping: 0
+    restLength: 0.5908091
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 4
+    nodeB: 5
+    compliance: 2
+    damping: 0
+    restLength: 0.4122546
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 4
+    nodeB: 8
+    compliance: 2
+    damping: 0
+    restLength: 0.5852387
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 4
+    nodeB: 9
+    compliance: 2
+    damping: 0
+    restLength: 0.81732804
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 4
+    nodeB: 11
+    compliance: 2
+    damping: 0
+    restLength: 0.9953708
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 5
+    nodeB: 8
+    compliance: 2
+    damping: 0
+    restLength: 0.9953708
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 6
+    nodeB: 7
+    compliance: 2
+    damping: 0
+    restLength: 0.40689015
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 6
+    nodeB: 9
+    compliance: 2
+    damping: 0
+    restLength: 0.5450613
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 6
+    nodeB: 10
+    compliance: 2
+    damping: 0
+    restLength: 0.7180721
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 7
+    nodeB: 9
+    compliance: 2
+    damping: 0
+    restLength: 0.6085914
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 7
+    nodeB: 10
+    compliance: 2
+    damping: 0
+    restLength: 0.5050657
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 8
+    nodeB: 9
+    compliance: 2
+    damping: 0
+    restLength: 0.5676802
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 8
+    nodeB: 10
+    compliance: 2
+    damping: 0
+    restLength: 0.6651716
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 8
+    nodeB: 11
+    compliance: 2
+    damping: 0
+    restLength: 0.4122546
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 9
+    nodeB: 10
+    compliance: 2
+    damping: 0
+    restLength: 0.41363823
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 9
+    nodeB: 11
+    compliance: 2
+    damping: 0
+    restLength: 0.74185264
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  - nodeA: 10
+    nodeB: 11
+    compliance: 2
+    damping: 0
+    restLength: 0.57404923
+    minLength: 0
+    maxLength: Infinity
+    lagrangeMultiplier: 0
+    isBroken: 0
+    strength: Infinity
+    isEdgeSliding: 0
+    edgeNodeA: -1
+    edgeNodeB: -1
+    slidingNode: -1
+    targetPerpDistance: 0
+    isActive: 1
+    lastSolvedFrame: -1
+  pinnedNodes: 
+  nodeMasses:
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  - 0.5
+  maxStretchFactor: 1.05
+  minStretchFactor: 0.95
+  faces: []
+  nodeSets:
+  - name: Lungs
+    nodeIndices: 0b00000005000000
+    color: {r: 0, g: 1, b: 1, a: 1}
+    isVisible: 1
+  linkSets: []
+  compliance: 0.01
+  DefaultBeamDamping: 0.3
+  uniformMassEditorValue: 0.5
